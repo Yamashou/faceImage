@@ -27,7 +27,7 @@ func GetFaceImages(filename string, n uint, isGray bool) {
 		if isGray {
 			img = getGray(img)
 		}
-		name := strconv.Itoa(int(time.Now().Unix()) + i)
+		name := strconv.Itoa(int(time.Now().UnixNano()) + i)
 		createImg(img, name+".jpg")
 	}
 
